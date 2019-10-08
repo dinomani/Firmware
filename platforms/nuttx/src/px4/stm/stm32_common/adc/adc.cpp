@@ -69,7 +69,7 @@
 
 
 #ifdef STM32_ADC_CCR
-# define rCCR(base)		REG((base), STM32_ADC_CCR_OFFSET)
+# define rCCR(base)		REG((STM32_ADCCMN_BASE), STM32_ADC_CCR_OFFSET)
 
 /* Assuming VDC 2.4 - 3.6 */
 
@@ -225,6 +225,6 @@ uint16_t px4_arch_adc_sample(uint32_t base_address, unsigned channel)
 
 uint32_t px4_arch_adc_temp_sensor_mask()
 {
-	return 1 << 16;
+	return 1 << 18;
 }
 
