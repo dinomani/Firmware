@@ -231,6 +231,7 @@
 #define ADC1_CH(n)                  (n)
 #define ADC1_GPIO(n)                GPIO_ADC1_IN##n
 
+
 /* Define GPIO pins used as ADC N.B. Channel numbers must match below */
 
 #define PX4_ADC_GPIO  \
@@ -259,6 +260,8 @@
 #define ADC_HW_VER_SENSE_CHANNEL            /* PC2 */  ADC1_CH(12)
 #define ADC_HW_REV_SENSE_CHANNEL            /* PC3 */  ADC1_CH(13)
 #define ADC1_SPARE_1_CHANNEL                /* PC4 */  ADC1_CH(14)
+
+#define ADC_INTERNAL_TEMP_SENSOR_CHANNEL (18) /* No Gpio assigned, internal channel*/
 
 #if BOARD_HAS_NBAT_V == 2 && BOARD_HAS_NBAT_I == 2
 #define ADC_CHANNELS \
