@@ -225,6 +225,10 @@ uint16_t px4_arch_adc_sample(uint32_t base_address, unsigned channel)
 
 uint32_t px4_arch_adc_temp_sensor_mask()
 {
-	return 1 << 16;
+	#ifdef ADC_INTERNAL_TEMP_SENSOR_CHANNEL
+		return 1 << ADC_INTERNAL_TEMP_SENSOR_CHANNEL;
+	#elif
+		return 1 << 16;
+	#endif
 }
 
