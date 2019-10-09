@@ -231,7 +231,6 @@
 #define ADC1_CH(n)                  (n)
 #define ADC1_GPIO(n)                GPIO_ADC1_IN##n
 
-
 /* Define GPIO pins used as ADC N.B. Channel numbers must match below */
 
 #define PX4_ADC_GPIO  \
